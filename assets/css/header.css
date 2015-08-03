@@ -1,0 +1,36 @@
+.header .logo {
+	margin: 20px;
+	display: block;
+}
+.header .logo img{
+	height: 50px;
+}
+.header .navbar {
+	background-color: #282828;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+.header .navbar a{ 
+	color: #fff;
+	padding: 10px;
+	line-height: 30px;
+}
+.header .navbar a:hover{
+	color: #585858;
+} 
+.header .navbar .dropdown ul li a {
+	color: #383838;
+}
+.header .navbar-form {
+	margin: 30px;
+}
+.header .navbar-brand>img {
+	height: 30px;
+}
+.header .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+.header .navbar-toggle {
+	border: 1px solid #fff;
+}
