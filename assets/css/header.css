@@ -1,36 +1,47 @@
-.header .logo {
-	margin: 20px;
-	display: block;
-}
-.header .logo img{
-	height: 50px;
+.header {
+	background: url('../images/bg_header.png') no-repeat top;
+	background-size: 100% 100%;
 }
 .header .navbar {
-	background-color: #282828;
-	border: none;
-	border-radius: 0;
-	margin-bottom: 0;
+	overflow: hidden;
+	display: block;
 }
-.header .navbar a{ 
-	color: #fff;
-	padding: 10px;
-	line-height: 30px;
+.header .navbar .logo{
+	height: 100%;
 }
-.header .navbar a:hover{
-	color: #585858;
-} 
-.header .navbar .dropdown ul li a {
-	color: #383838;
-}
-.header .navbar-form {
-	margin: 30px;
-}
-.header .navbar-brand>img {
-	height: 30px;
-}
-.header .navbar-toggle .icon-bar {
+#nav-header .navbar-toggle{
 	background-color: #fff;
+	margin-top: 20px;
 }
-.header .navbar-toggle {
-	border: 1px solid #fff;
+#nav-header .icon-bar{
+	background-color: #2c2c2c;
+}
+@media(max-width: 768px){
+	#nav-header ul {
+		width: 100%;
+	}
+	.header .container {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+#nav-header ul li a {
+	color: #fff;
+}
+#nav-header ul li a:hover {
+	color: #ccc;
+	background: transparent;
+}
+#carousel-large {
+	margin-bottom: 30px;
+}
+#carousel-large img {
+	width: 100%;
+}
+#carousel-large .carousel-indicators {
+	bottom: -34px;
+	right: 0px;
+	left: auto;
+	width: 100%;
+	text-align: right;
 }

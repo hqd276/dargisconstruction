@@ -1,48 +1,104 @@
 <div class="header">
+	<div class="container">
+		<nav id="nav-header" class="navbar">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="logo" href="/">
+			  	<img src="<?php echo base_url();?>assets/images/logo.png">
+			  </a>
+		    </div>
 
-		<div class="container hidden-xs">
-			<a class="logo pull-left" href="#"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
-			<!-- <form class="navbar-form pull-right" role="search">
-		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="Tìm kiếm">
-		        </div>
-		        <button type="submit" class="btn btn-default">Tìm</button>
-	      	</form> -->
-      	</div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav pull-right">
+			    <li>
+			    	<a href="#">Home</a>
+			    </li>
+			    <li>
+			    	<a href="#">About Us</a>
+			    </li>
+			    <li>
+			    	<a href="#">Services</a>
+			    </li>
+			    <li>
+			    	<a href="#">Projects</a>
+			    </li>
+			    <li>
+			    	<a href="#">Team</a>
+			    </li>
+			    <li>
+			    	<a href="#">Contact</a>
+			    </li>
+			  </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
 
-			<nav class="navbar">
-			  <div class="container">
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <a class="navbar-brand visible-xs" href="/"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
-			    </div>
+		<div id="carousel-large" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-large" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-large" data-slide-to="1"></li>
+				<li data-target="#carousel-large" data-slide-to="2"></li>
+				<li data-target="#carousel-large" data-slide-to="3"></li>
+				<li data-target="#carousel-large" data-slide-to="4"></li>
+				<li data-target="#carousel-large" data-slide-to="5"></li>
+			</ol>
 
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav text-uppercase">
-			      	<li><a href="/"> <i class="fa fa-home"></i> </a></li>
-			        <li><a href="<?php echo base_url('/about')?>">Nagoya Việt Nam</a></li>
-			        <li class="dropdown">
-			        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sản phẩm sản xuất<span class="caret"></span></a>
-				          <ul class="dropdown-menu text-capitalize" role="menu">
-				      		<?php	foreach ($cat_product as $key => $value) {
-			      				echo "<li><a href='".base_url().'danh-muc-san-pham/'.$value['slug']."'>".$value['name']."</a></li>";
-			      			}?>
-				          </ul>
-			        </li>
-			        <?php	foreach ($cat_news as $key => $value) {
-	      				echo "<li><a href='".base_url().'danh-muc/'.$value['slug']."'>".$value['name']."</a></li>";
-	      			}?>
-			        <li><a href="<?php echo base_url('/contact')?>">Liên hệ</a></li>
-			      </ul>
-			      
-			    </div><!-- /.navbar-collapse -->
-			  </div><!-- /.container-fluid -->
-			</nav>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+				  <img src="<?php echo base_url();?>assets/images/slider/slider1.jpg" alt="...">
+				  <!-- <div class="carousel-caption">
+				    
+				  </div> -->
+				</div>
+				<div class="item ">
+				  <img src="<?php echo base_url();?>assets/images/slider/slider2.jpg" alt="...">
+				  <!-- <div class="carousel-caption">
+				    
+				  </div> -->
+				</div>
+				<div class="item ">
+				  <img src="<?php echo base_url();?>assets/images/slider/slider3.jpg" alt="...">
+				  <!-- <div class="carousel-caption">
+				    
+				  </div> -->
+				</div>
+				<div class="item ">
+				  <img src="<?php echo base_url();?>assets/images/slider/slider4.jpg" alt="...">
+				  <!-- <div class="carousel-caption">
+				    
+				  </div> -->
+				</div>
+				<div class="item ">
+				  <img src="<?php echo base_url();?>assets/images/slider/slider5.jpg" alt="...">
+				  <!-- <div class="carousel-caption">
+				    
+				  </div> -->
+				</div>
+				<div class="item ">
+				  <img src="<?php echo base_url();?>assets/images/slider/slider6.jpg" alt="...">
+				  <!-- <div class="carousel-caption">
+				    
+				  </div> -->
+				</div>
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-large" role="button" data-slide="prev">
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-large" role="button" data-slide="next">
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
 	</div>
+</div>

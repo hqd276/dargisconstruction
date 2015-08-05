@@ -1,76 +1,21 @@
-.carousel-control {
-	background-image: none;
+.middle {
+	background: url('../images/bg_content.png') repeat-x;
 }
-.carousel {
-	margin: 10px 0;
+@media(max-width: 768px){
+	.product-home .item-home{
+		clear: both;
+		padding-top: 10px;
+	}
 }
-.carousel-inner>.item>img {
+.product-home .item-home img {
 	width: 100%;
 }
-.group-item {
-	margin-bottom: 30px;
-	display: block;
-	overflow: hidden;
-}
-.group-item .group-title{
-	background: -webkit-linear-gradient(left, #700000 , #fff); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(right, #700000, #fff); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(right, #700000, #fff); /* For Firefox 3.6 to 15 */
-  	background: linear-gradient(to right, #700000 , #fff); /* Standard syntax */
-  	padding: 15px 30px; 
-  	
-}
-.group-item .group-title a{
+.product-home .item-home .more {
+	background-color: #2c2c2c;
 	color: #fff;
+	padding: 5px 10px;
+	border-bottom: 2px #ccc solid;
 }
-.group-item .item .img-item {
-	border-bottom: 1px solid #282828;
-	display: block;
-	height: 250px;
-}
-.group-item .item .img-item img{ 
-
-	width: 95%;
-}
-.group-item .item .title-item {
+.product-home .item-home .more:hover {
 	color: #999;
-	font-size: 16px;
-	margin: 10px 0;
-	display: block;
 }
-.group-item .item .title-item:hover {
-	text-decoration: none;
-	opacity: 0.8;
-}
-
-.group-item .item .price-item {
-	font-size: 20px;
-	font-weight: bold;
-}
-.gallery-home ul li {
-	float: left;
-	margin-right: 20px;
-	width: 250px;
-	height: 150px;
-	overflow: hidden;
-	position: relative;
-	padding: 0;
-}
-.gallery-home .group-title{
-	background: -webkit-linear-gradient(left, #700000 , #fff); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(right, #700000, #fff); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(right, #700000, #fff); /* For Firefox 3.6 to 15 */
-  	background: linear-gradient(to right, #700000 , #fff); /* Standard syntax */
-  	padding: 15px 30px; 
-  	color: #fff;
-}
-.gallery-home ul li .caption {
-	position: absolute;
-	line-height: 30px;
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0.5);
-	width: 100%;
-	bottom: 0;
-}
-
-.carousel-control.left,.carousel-control.right {background-image:none;}

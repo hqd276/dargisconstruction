@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://beptrexanh.net/';
+$config['base_url']	= '';
 // $config['base_url']	= 'http://zenithvietnamtours.com/';
 
 /*

@@ -1,23 +1,45 @@
 <div class="footer">
   <div class="container">
     <div class="col-sm-3">
-      <a class="logo" href="#"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
-      Copyright &copy; 2015 Beptrexanh.net. All right reserved 
+      <h6 class="text-uppercase">CONSTRUCTION</h6>
+      <ul class="list-unstyled">
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+      </ul>
     </div>
-    
-    <div class="col-sm-6">
-      <?php echo $setting['contact']['data']->detail;?>
-    </div>
-
     <div class="col-sm-3">
-      <div class="video-container">
-        <iframe class="video" width="100%" height="150px" src="https://www.youtube.com/embed/<?php echo $video['link']?>" frameborder="0" allowfullscreen></iframe>
-      </div>
-        <br>
-      	<?php echo $video['title']?>
-      	<br>
-      	<a class="pull-right" href="<?php echo base_url('video')?>"><i>Xem các video khác</i></a>
+      <h6 class="text-uppercase">RENOVATION</h6>
+      <ul class="list-unstyled">
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+      </ul>
     </div>
-
+    <div class="col-sm-3">
+      <h6 class="text-uppercase">SERVICES</h6>
+      <ul class="list-unstyled">
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h6 class="text-uppercase">INTERSHIPS, TRAININGS AND JOBS</h6>
+      <ul class="list-unstyled">
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+        <li><a href="#">Vestibulum iaculis</a></li>
+      </ul>
+    </div>
+    <div>&copy Copyright HD 2015</div>
   </div>
 </div>

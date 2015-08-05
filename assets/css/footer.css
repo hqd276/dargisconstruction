@@ -1,20 +1,19 @@
 .footer {
-	background-color: #404040;
-	font-size: 14px;
+	background: url('../images/bg_header.png') no-repeat top;
 	color: #fff;
-	padding: 20px;
+	padding: 20px 0;
 }
-.footer .logo {
-	margin: 50px 0 5px;
+.footer ul {
+	font-size: 12px;
+}
+.footer ul li {
+	border-bottom: 1px dotted #fff;
+}
+.footer ul a{
+	color: #fff;
+	margin: 3px;
 	display: block;
 }
-.footer .logo img{
-	height: 30px;
-}
-.footer a {
-	color: #fff;
-
-}
-.footer a:hover {
-	text-decoration: none;
+.footer ul a:hover{
+	color: #ccc;
 }
