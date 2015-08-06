@@ -38,7 +38,8 @@ class Header extends MX_Controller{
 			$setting[$key]['data'] = json_decode($value['value']);
 		}
 		$data['setting'] = $setting;
-
+		$data['show_slide'] = false;
+		
 		return $data;
 
 		// $this->template->load_view('header',$data);

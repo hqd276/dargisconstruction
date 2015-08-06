@@ -1,12 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact.css">
 
 <div class="container contact-form bg-white">
-	<div class="col-sm-4">
-		<h2 class="text-uppercase"><?php echo $setting['contact']['data']->name;?></h2>
-		<div>
-			<?php echo $setting['contact']['data']->detail;?>
-		</div>
-	</div>
+	<h2 class="text-uppercase"><?php echo $setting['contact']['data']->name;?></h2>
 	<form class="form-horizontal  col-sm-8" role="form" method="post" action="<?php echo base_url();?>contact">
 		<div class="form-group">
 			<div>
@@ -24,6 +19,9 @@
 				<label class="control-label" for="inputError1"><?php echo form_error('content'); ?></label>
 			</div>
 		</div>
+		<div class="col-sm-12">
+			<?php echo $setting['contact']['data']->description;?>
+		</div>
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 			<div class="col-sm-10">
@@ -31,15 +29,15 @@
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Phone</label>
 			<div class="col-sm-10">
-			  	<input type="" class="form-control" id="inputEmail3" name="phone" placeholder="Số điện thoại" value="<?php echo set_value('phone'); ?>">
+			  	<input type="" class="form-control" id="inputEmail3" name="phone" placeholder="Phone" value="<?php echo set_value('phone'); ?>">
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Nội dung</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Content</label>
 			<div class="col-sm-10">
-				<textarea class="form-control" name="content" placeholder="Nội dung"><?php echo set_value('content'); ?></textarea>
+				<textarea class="form-control" name="content" placeholder="Content"><?php echo set_value('content'); ?></textarea>
 			</div>
 		</div>
 		
@@ -49,6 +47,11 @@
 			</div>
 		</div>
 	</form>
-
+	<div class="col-sm-4">
+		
+		<div>
+			<?php echo $setting['contact']['data']->detail;?>
+		</div>
+	</div>
 </div>
 <div class="clearfix"></div>

@@ -37,19 +37,19 @@
 	        </li>
 	        <!-- <li>
 	        	<a href="<?php echo base_url();?>admin/advert">Advertising</a>
-	        </li>
-	        <li>
-	        	<a href="<?php echo base_url();?>admin/member">Member</a>
 	        </li> -->
+	        <li>
+	        	<a href="<?php echo base_url();?>admin/member">Team</a>
+	        </li>
 	        <li>
 	        	<a href="<?php echo base_url();?>admin/banner">Slide Show</a>
 	        </li>
-	        <li>
+	        <!-- <li>
 	          	<a href="<?php echo base_url();?>admin/gallery">Gallery</a>
           	</li>
           	<li>
 	          	<a href="<?php echo base_url();?>admin/video">Video</a>
-          	</li>
+          	</li> -->
 	        <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">System <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">

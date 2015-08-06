@@ -1,0 +1,9 @@
+.about-detail td{
+	float: left !important;
+}
+.about-detail img{
+	width: 100%;
+}
+.justify {
+	text-align: justify;
+}

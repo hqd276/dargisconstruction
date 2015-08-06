@@ -7,3 +7,6 @@ h3,h4{
 a:hover {
 	text-decoration: none;
 }
+.middle {
+	background: url('../images/bg_content.png') repeat-x #f6f6f6;
+}

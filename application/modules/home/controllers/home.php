@@ -31,6 +31,8 @@ class Home extends MX_Controller{
 		
 		$data['gallery'] = $gallery;
 
+		$data['show_slide'] = true;
+
 		$this->template->build('home',$data);
 	}
 }

@@ -19,10 +19,10 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav pull-right">
 			    <li>
-			    	<a href="#">Home</a>
+			    	<a href="<?php echo base_url();?>">Home</a>
 			    </li>
 			    <li>
-			    	<a href="#">About Us</a>
+			    	<a href="<?php echo base_url('about');?>">About Us</a>
 			    </li>
 			    <li>
 			    	<a href="#">Services</a>
@@ -34,62 +34,31 @@
 			    	<a href="#">Team</a>
 			    </li>
 			    <li>
-			    	<a href="#">Contact</a>
+			    	<a href="<?php echo base_url('contact');?>">Contact</a>
 			    </li>
 			  </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-
+		<?php if ($show_slide) {?>
 		<div id="carousel-large" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
-				<li data-target="#carousel-large" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-large" data-slide-to="1"></li>
-				<li data-target="#carousel-large" data-slide-to="2"></li>
-				<li data-target="#carousel-large" data-slide-to="3"></li>
-				<li data-target="#carousel-large" data-slide-to="4"></li>
-				<li data-target="#carousel-large" data-slide-to="5"></li>
+				<?php foreach ($banners as $key => $value){?>
+				<li data-target="#carousel-large" data-slide-to="0" class="<?php echo ($key==0)?"active":"" ?>"></li>
+			   	<?php } ?>
 			</ol>
 
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-				  <img src="<?php echo base_url();?>assets/images/slider/slider1.jpg" alt="...">
-				  <!-- <div class="carousel-caption">
-				    
-				  </div> -->
-				</div>
-				<div class="item ">
-				  <img src="<?php echo base_url();?>assets/images/slider/slider2.jpg" alt="...">
-				  <!-- <div class="carousel-caption">
-				    
-				  </div> -->
-				</div>
-				<div class="item ">
-				  <img src="<?php echo base_url();?>assets/images/slider/slider3.jpg" alt="...">
-				  <!-- <div class="carousel-caption">
-				    
-				  </div> -->
-				</div>
-				<div class="item ">
-				  <img src="<?php echo base_url();?>assets/images/slider/slider4.jpg" alt="...">
-				  <!-- <div class="carousel-caption">
-				    
-				  </div> -->
-				</div>
-				<div class="item ">
-				  <img src="<?php echo base_url();?>assets/images/slider/slider5.jpg" alt="...">
-				  <!-- <div class="carousel-caption">
-				    
-				  </div> -->
-				</div>
-				<div class="item ">
-				  <img src="<?php echo base_url();?>assets/images/slider/slider6.jpg" alt="...">
-				  <!-- <div class="carousel-caption">
-				    
-				  </div> -->
-				</div>
+				<?php foreach ($banners as $key => $value){?>
+			  	<div class="item <?php echo ($key==0)?"active":"" ?>" >
+			    	<img src="<?php echo base_url("uploads/banner/".$value['image']); ?>">
+			    	<div class="carousel-caption">
+			        	
+			      	</div>
+			    </div>
+			   	<?php } ?>
 			</div>
 
 			<!-- Controls -->
@@ -100,5 +69,6 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
+		<?php }?>
 	</div>
 </div>
