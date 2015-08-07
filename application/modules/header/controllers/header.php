@@ -13,6 +13,7 @@ class Header extends MX_Controller{
 		
 		$cat_news = array();
 		$cat_product = array();
+		$cat_project = array();
 		$categories = $this->modelcategory->getCategories(array('status'=>1),null," ORDER BY `order`");
 		
 		foreach ($categories as $key => $value) {
@@ -20,13 +21,13 @@ class Header extends MX_Controller{
 				$cat_product[] = $value;
 			}else if ($value['type']==0){
 				$cat_news[] = $value;
+			}else if ($value['type']==2){
+				$cat_project[] = $value;
 			}
 		}
 		$data['cat_news'] = $cat_news;
 		$data['cat_product'] = $cat_product;
-
-		$video = $this->modelvideo->getVideo('',1,'id DESC');
-		$data['video'] = $video[0];
+		$data['cat_project'] = $cat_project;
 
 		$data['page'] = $page;
 

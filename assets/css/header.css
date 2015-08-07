@@ -3,7 +3,7 @@
 	background-size: 100% 100%;
 }
 .header .navbar {
-	overflow: hidden;
+	/*overflow: hidden;*/
 	display: block;
 }
 .header .navbar .logo{
@@ -31,6 +31,18 @@
 #nav-header ul li a:hover {
 	color: #ccc;
 	background: transparent;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	background-color: transparent;
+}
+#nav-header .dropdown-menu {
+	margin: 0;
+	padding: 0;
+	/*border-radius: 0;*/
+}
+#nav-header .dropdown-menu li a {
+	color: #999;
 }
 #carousel-large {
 	margin-bottom: 30px;

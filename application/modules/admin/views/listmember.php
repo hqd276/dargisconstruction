@@ -5,7 +5,9 @@
 	<table class="table table-bordered table-hover">
 		<thead>
 			<th>Id</th>
-			<th>Email</th>
+			<th>Job</th>
+			<th>Position</th>
+			<th>Name</th>
 			<th>Image</th>
 			<th>Status</th>
 			<th>Action</th>
@@ -15,6 +17,8 @@
 			<?php foreach($list as $item) {?>
 			<tr>
 				<td><?php echo $item["id"]?></td>
+				<td><?php echo $item["job"]?></td>
+				<td><?php echo $item["position"]?></td>
 				<td><?php echo $item["name"]?></td>
 				<td><?php 
 				if ($item['image']!='') {

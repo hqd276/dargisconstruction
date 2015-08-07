@@ -2,6 +2,8 @@
 
 <div class="about-us container" >
 	<h2 class="text-uppercase"><?php echo $about['data']->name?></h2>
+	<hr>
+	
 	<!-- <p><i><?php echo $about['data']->description?></i></p> -->
 	<div class="about-detail"><?php echo $about['data']->detail?></div>
 </div>

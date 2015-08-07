@@ -41,7 +41,7 @@
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 
-// $route['home'] = "home";
+$route['team'] = "member";
 
 $route['user'] = "user";
 $route['login'] = "user/login";

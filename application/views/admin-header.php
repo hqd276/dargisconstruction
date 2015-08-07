@@ -27,12 +27,21 @@
 	          	</ul>
 	        </li>
 	        
-	        <li class="dropdown">
+	        <!-- <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Product <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
 	          		<li><a href="<?php echo base_url('admin/category/index/1');?>">Product Category Manager</a></li>
                   	<li><a href="<?php echo base_url('admin/product/index/0');?>">Product Manager</a></li>
                   	<li><a href="<?php echo base_url('admin/product/add/0');?>">Add new Product</a></li>
+	          	</ul>
+	        </li> -->
+
+	        <li class="dropdown">
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project <span class="caret"></span></a>
+	          	<ul class="dropdown-menu text-capitalize" role="menu">
+	          		<li><a href="<?php echo base_url('admin/category/index/2');?>">Project Category Manager</a></li>
+                  	<li><a href="<?php echo base_url('admin/project/index/0');?>">Project Manager</a></li>
+                  	<li><a href="<?php echo base_url('admin/project/add/0');?>">Add new Project</a></li>
 	          	</ul>
 	        </li>
 	        <!-- <li>
@@ -46,8 +55,8 @@
 	        </li>
 	        <!-- <li>
 	          	<a href="<?php echo base_url();?>admin/gallery">Gallery</a>
-          	</li>
-          	<li>
+          	</li> -->
+          	<!-- <li>
 	          	<a href="<?php echo base_url();?>admin/video">Video</a>
           	</li> -->
 	        <li class="dropdown">

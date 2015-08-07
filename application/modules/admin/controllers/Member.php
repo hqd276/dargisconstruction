@@ -38,7 +38,9 @@ class Member extends MX_Controller{
 		$this->load->helper(array('form')); 
 		$this->load->helper(array('util')); 
 
-		$dataC = array('name' =>'',
+		$dataC = array('job' =>'',
+						'position' =>'',
+						'name' =>'',
 						'description' =>'',
 						'status' =>'',
 						'image' =>'',);
@@ -50,6 +52,8 @@ class Member extends MX_Controller{
 
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
+				$dataC['job'] = $this->input->post('job'); 
+				$dataC['position'] = $this->input->post('position'); 
 				$dataC['name'] = $this->input->post('name'); 
 				$dataC['description'] = $this->input->post('description'); 
 				if ($this->input->post('status'))
@@ -96,6 +100,8 @@ class Member extends MX_Controller{
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
 				$dataC['name'] = $this->input->post('name'); 
+				$dataC['job'] = $this->input->post('job'); 
+				$dataC['position'] = $this->input->post('position'); 
 				$dataC['description'] = $this->input->post('description'); 
 				if ($this->input->post('status'))
 					$dataC['status'] = 1;

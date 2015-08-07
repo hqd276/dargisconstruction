@@ -24,14 +24,24 @@
 			    <li>
 			    	<a href="<?php echo base_url('about');?>">About Us</a>
 			    </li>
-			    <li>
-			    	<a href="#">Services</a>
+			    <li class="dropdown">
+			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+		          	<ul class="dropdown-menu text-capitalize" role="menu">
+		          		<li><a href="">Construction</a></li>
+		          		<li><a href="">Renovation</a></li>
+		          		<li><a href="">Management</a></li>
+		          	</ul>
+			    </li>
+			    <li class="dropdown">
+			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <span class="caret"></span></a>
+		          	<ul class="dropdown-menu text-capitalize" role="menu">
+		          		<?php foreach ($cat_project as $key => $value) {?>
+		          			<li><a href="<?php echo base_url('project/'.$value['id']);?>"><?php echo $value['name']?></a></li>
+		          		<?php }?>
+		          	</ul>
 			    </li>
 			    <li>
-			    	<a href="#">Projects</a>
-			    </li>
-			    <li>
-			    	<a href="#">Team</a>
+			    	<a href="<?php echo base_url('team');?>">Team</a>
 			    </li>
 			    <li>
 			    	<a href="<?php echo base_url('contact');?>">Contact</a>
