@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Gallery extends MX_Controller{
+class Project extends MX_Controller{
 	public function __construct(){
 		parent::__construct();
 		$this->template->set_partial('header','admin-header');
@@ -9,7 +9,7 @@ class Gallery extends MX_Controller{
 		$user = $this->session->userdata('user'); 
 		if ($user['id']){
 			#Tải model 
-			$this->load->model(array('modelgallery'));
+			$this->load->model(array('modelproject'));
 
 			$this->template->set('user',$user);
 		}else{
@@ -27,29 +27,29 @@ class Gallery extends MX_Controller{
 			$begin = ($page-1) * $item_per_page ;
 		}
 		$this->load->model(array('modelcategory'));
-		$gallery = $this->modelgallery->getGallery(null," LIMIT ".$begin.",".($item_per_page+1));
-		if (count($gallery)>0) {
-			foreach ($gallery as $key => $value) {
+		$project = $this->modelproject->getProject(null," LIMIT ".$begin.",".($item_per_page+1));
+		if (count($project)>0) {
+			foreach ($project as $key => $value) {
 				if ($value['category_id']>0){
 					$category = $this->modelcategory->getCategoryById($value['category_id']);
-					$gallery[$key]['category'] = $category['name'];
+					$project[$key]['category'] = $category['name'];
 				}else {
-					$gallery[$key]['category'] = '';
+					$project[$key]['category'] = '';
 				}
 			}
 		}
 
-		if (count($gallery)>$item_per_page){
+		if (count($project)>$item_per_page){
 			$data['next'] = $page + 1;
-			array_pop($gallery);
+			array_pop($project);
 		}else 
 			$data['next'] = 0;
 		
 		$data['prev'] = $page - 1;
 
-		$data['list'] = $gallery;
+		$data['list'] = $project;
 
-		$this->template->build('listgallery',$data);
+		$this->template->build('listproject',$data);
 	}
 
 	public function add(){
@@ -80,12 +80,12 @@ class Gallery extends MX_Controller{
 
 			if (!empty ($_FILES['image'])) {
 				$this->load->model(array('Mgallery'));
-				$image_data = $this->Mgallery->do_upload("/gallery/");
+				$image_data = $this->Mgallery->do_upload("/project/");
 				if ($image_data) {
 					$dataC['image'] = $image_data["file_name"];
-					if ($this->modelgallery->insertImage($dataC)){
+					if ($this->modelproject->insertImage($dataC)){
 						$data['b_Check']= true;
-						redirect(base_url('list-category/'.$type));
+						redirect(base_url('admin/project'));
 					}
 				}
 			}
@@ -97,13 +97,13 @@ class Gallery extends MX_Controller{
 		$data['category_box'] = $this->category_box($category, $dataC);
 
 		$data['item'] = $dataC;
-		$this->template->build('addgallery',$data);
+		$this->template->build('addproject',$data);
 	}
 	public function edit($id=0){
 		$data = array();
 		$data['title'] = "Edit Image";
 		if ($id<=0)
-			redirect(base_url('admin/gallery/index'));
+			redirect(base_url('admin/project/index'));
 
 		#Tải thư viện và helper của Form trên CodeIgniter 
 		$this->load->helper(array('form')); 
@@ -124,7 +124,7 @@ class Gallery extends MX_Controller{
 
 			if (!empty ($_FILES['image'])) {
 				$this->load->model(array('Mgallery'));
-				$image_data = $this->Mgallery->do_upload("/gallery/");
+				$image_data = $this->Mgallery->do_upload("/project/");
 				if ($image_data) {
 					$dataC['image'] = $image_data["file_name"];
 				}
@@ -132,7 +132,7 @@ class Gallery extends MX_Controller{
 
 			if ($this->modelgallery->updateImage($id,$dataC)){
 				$data['b_Check']= true;
-				redirect(base_url('list-category/'.$type));
+				redirect(base_url('admin/project'));
 			}else{
 				$data['b_Check']= false;
 			}
@@ -144,12 +144,12 @@ class Gallery extends MX_Controller{
 		$data['category_box'] = $this->category_box($category, $dataC);
 
 		$data['item'] = $dataC;
-		$this->template->build('addgallery',$data);
+		$this->template->build('addproject',$data);
 	}
 
 	public function delete($id=0){
 		$this->db->delete('gallery', array('id' => $id)); 
-		redirect(base_url('/admin/gallery'));
+		redirect(base_url('/admin/project'));
 	}
 
 	function category_box ($category, $dataC) {
@@ -157,8 +157,7 @@ class Gallery extends MX_Controller{
 		foreach ($category as $k => $v) {
 			$category_box.= "<option value='".$v['id']."' ";
 			$category_box.= ($dataC['category_id'] == $v['id'])?'selected':'';
-			$root = ($v['parent']==1)?'Đã thực hiện':'Đang thực hiện';
-			$category_box.= "> [" . $root . "] ".$v['name']."</option>";
+			$category_box.= "> ".$v['name']."</option>";
 
 		}
 		// $category[$key]["child"]= $child;

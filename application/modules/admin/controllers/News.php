@@ -31,7 +31,7 @@ class News extends MX_Controller{
 		if (count($news)>0) {
 			foreach ($news as $key => $value) {
 				if(!$value['image'])
-						$news[$key]['image'] = 'Bep_dun_vien_nhien_lieu_Tre_xanh_2.JPG';
+						$news[$key]['image'] = '';
 					
 				$category = $this->modelcategory->getCategoryById($value['category_id']);
 				if($category)
@@ -73,9 +73,9 @@ class News extends MX_Controller{
 			// case 2:
 			// 	$data['title'] = 'Tour';
 			// 	break;
-			// case 3:
-			// 	$data['title'] = 'Blog';
-			// 	break;
+			case 3:
+				$data['title'] = 'Service';
+				break;
 			
 			default:
 				$data['title'] = 'News';
@@ -93,14 +93,12 @@ class News extends MX_Controller{
 						'slug' =>'',
 						'description' =>'',
 						'detail' =>'',
-						'info' =>'',
 						'tag' =>'',
 						'author' =>'',
 						'category_id' =>'',
 						'created' =>'',
 						'hot_news' =>'',
 						'home_news' =>'',
-						'is_video' =>'',
 						'image' =>'',
 						'order' =>'',
 						'status' =>'');
@@ -117,7 +115,6 @@ class News extends MX_Controller{
 				$dataC['slug'] = safe_title($this->input->post('title')); 
 				$dataC['description'] = $this->input->post('description'); 
 				$dataC['detail'] = $this->input->post('detail'); 
-				$dataC['info'] = $this->input->post('info'); 
 				$dataC['tag'] = $this->input->post('tag'); 
 				$dataC['author'] = $user['id'];
 				$dataC['category_id'] = $this->input->post('category_id'); 
@@ -133,11 +130,6 @@ class News extends MX_Controller{
 					$dataC['home_news'] = 1;
 				else 
 					$dataC['home_news'] = 0;
-
-				if ($this->input->post('is_video'))
-					$dataC['is_video'] = 1;
-				else 
-					$dataC['is_video'] = 0;
 
 				if ($this->input->post('status'))
 					$dataC['status'] = 1;
@@ -195,7 +187,6 @@ class News extends MX_Controller{
 				$dataC['slug'] = safe_title($this->input->post('title')); 
 				$dataC['description'] = $this->input->post('description'); 
 				$dataC['detail'] = $this->input->post('detail'); 
-				$dataC['info'] = $this->input->post('info'); 
 				$dataC['tag'] = $this->input->post('tag'); 
 				// $dataC['author'] = $user['id'];
 				$dataC['category_id'] = $this->input->post('category_id'); 
@@ -211,12 +202,7 @@ class News extends MX_Controller{
 					$dataC['home_news'] = 1;
 				else 
 					$dataC['home_news'] = 0;
-
-				if ($this->input->post('is_video'))
-					$dataC['is_video'] = 1;
-				else 
-					$dataC['is_video'] = 0;
-
+				
 				if ($this->input->post('status'))
 					$dataC['status'] = 1;
 				else 

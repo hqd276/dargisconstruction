@@ -1,6 +1,6 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">Add new Image</h2>
-	<a href="<?php echo base_url('/admin/gallery')?>" class="btn btn-default pull-right"> Gallery </a>
+	<a href="<?php echo base_url('/admin/project')?>" class="btn btn-default pull-right"> Project </a>
 
 	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
 		<div class="form-group">
@@ -37,7 +37,7 @@
 			<div class="col-sm-10">
 				<?php 
 				if ($item['image']!='') {
-					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/gallery/".$item['image'])."'/>";
+					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/project/".$item['image'])."'/>";
 				}
 				?>
 			  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">

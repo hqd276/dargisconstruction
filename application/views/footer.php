@@ -1,45 +1,16 @@
 <div class="footer">
   <div class="container">
+    <?php foreach ($list_service as $key => $value) {?>
     <div class="col-sm-3">
-      <h6 class="text-uppercase">CONSTRUCTION</h6>
+      <h6 class="text-uppercase"><?php echo $value['name']?></h6>
       <ul class="list-unstyled">
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
+        <?php foreach ($value['items'] as $k => $v) {?>
+          <li><a href="<?php echo base_url('detail/'.$v['slug']);?>"><?php echo $v['title']?></a>
+        <?php }?>
       </ul>
     </div>
-    <div class="col-sm-3">
-      <h6 class="text-uppercase">RENOVATION</h6>
-      <ul class="list-unstyled">
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-3">
-      <h6 class="text-uppercase">SERVICES</h6>
-      <ul class="list-unstyled">
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-3">
-      <h6 class="text-uppercase">INTERSHIPS, TRAININGS AND JOBS</h6>
-      <ul class="list-unstyled">
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-        <li><a href="#">Vestibulum iaculis</a></li>
-      </ul>
-    </div>
+    <?php }?>
+    <div class="clearfix"></div>
     <div>&copy Copyright HD 2015</div>
   </div>
 </div>

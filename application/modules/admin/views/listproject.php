@@ -1,6 +1,6 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">List Image</h2>
-	<a href="<?php echo base_url('/admin/gallery/add')?>" class="btn btn-default pull-right"> Add new Image </a>
+	<a href="<?php echo base_url('/admin/project/add')?>" class="btn btn-default pull-right"> Add new Image </a>
 	
 	<table class="table table-bordered table-hover">
 		<thead>
@@ -20,13 +20,13 @@
 				<td><?php echo $item["category"]?></td>
 				<td><?php 
 				if ($item['image']!='') {
-					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/gallery/".$item['image'])."'/>";
+					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/project/".$item['image'])."'/>";
 				}
 				?></td>
 				<td><?php echo ($item["status"])?"Hiển thị":"Không hiển thị"?></td>
 				<td>
-					<a href="<?php echo base_url("/admin/gallery/edit/".$item["id"]);?>"  class="btn btn-default">Edit</a>
-					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/gallery/delete/'.$item["id"])?>')" class="btn btn-default"> Delete </a>
+					<a href="<?php echo base_url("/admin/project/edit/".$item["id"]);?>"  class="btn btn-default">Edit</a>
+					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/project/delete/'.$item["id"])?>')" class="btn btn-default"> Delete </a>
 				</td>
 			</tr>
 			<?php }?>

@@ -21,8 +21,8 @@ class News extends MX_Controller {
 	}
 	
 	public function index($type = 0,$cat = 0){
-		$dataR = Modules::run('right',$type);
-		$this->template->set_partial('right','right',$dataR);
+		$dataR = Modules::run('left',$type);
+		$this->template->set_partial('left','left',$dataR);
 
 		$data = array();
 		$data['title'] = "News";
@@ -40,9 +40,9 @@ class News extends MX_Controller {
 		$data['list_news'] = $list_news;
 		$this->template->build('news',$data);
 	}
-	public function index_t($slug = ''){
-		$dataR = Modules::run('right',0);
-		$this->template->set_partial('right','right',$dataR);
+	public function index_t($type = 0,$slug = ''){
+		$dataR = Modules::run('left',0);
+		$this->template->set_partial('left','left',$dataR);
 
 		$data = array();
 
@@ -55,7 +55,7 @@ class News extends MX_Controller {
 			if($list_news){
 				foreach ($list_news as $key => $value) {
 					if(!$value['image'])
-						$list_news[$key]['image'] = 'Bep_dun_vien_nhien_lieu_Tre_xanh_2.JPG';
+						$list_news[$key]['image'] = '';
 				}
 			}
 		}
@@ -64,6 +64,9 @@ class News extends MX_Controller {
 		$this->template->build('news',$data);
 	}
 	public function detail($id=0) {
+		$dataR = Modules::run('left',0);
+		$this->template->set_partial('left','left',$dataR);
+		
 		if ($id<=0) 
 			redirect(base_url().'news');
 
@@ -94,6 +97,9 @@ class News extends MX_Controller {
 	}
 
 	public function detail_t($slug='') {
+		$dataR = Modules::run('left',0);
+		$this->template->set_partial('left','left',$dataR);
+
 		if ($slug == '') 
 			redirect(base_url().'news');
 

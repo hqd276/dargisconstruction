@@ -27,16 +27,16 @@
 			    <li class="dropdown">
 			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
 		          	<ul class="dropdown-menu text-capitalize" role="menu">
-		          		<li><a href="">Construction</a></li>
-		          		<li><a href="">Renovation</a></li>
-		          		<li><a href="">Management</a></li>
+		          		<?php foreach ($cat_service as $key => $value) {?>
+		          			<li><a href="<?php echo base_url('service/'.$value['slug']);?>"><?php echo $value['name']?></a></li>
+		          		<?php }?>
 		          	</ul>
 			    </li>
 			    <li class="dropdown">
 			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <span class="caret"></span></a>
 		          	<ul class="dropdown-menu text-capitalize" role="menu">
 		          		<?php foreach ($cat_project as $key => $value) {?>
-		          			<li><a href="<?php echo base_url('project/'.$value['id']);?>"><?php echo $value['name']?></a></li>
+		          			<li><a href="<?php echo base_url('project/index/'.$value['id']);?>"><?php echo $value['name']?></a></li>
 		          		<?php }?>
 		          	</ul>
 			    </li>

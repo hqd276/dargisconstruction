@@ -34,7 +34,7 @@
 			<?php }?>
 		<?php }else{?>
 			<tr>
-				<td class="text-center" colspan="5">Don't have any Item!</td>
+				<td class="text-center" colspan="9">Don't have any Item!</td>
 			</tr>
 		<?php }?>
 		</tbody>

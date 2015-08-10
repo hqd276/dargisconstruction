@@ -18,14 +18,14 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav text-uppercase">
 		  	
-		    <li class="dropdown">
+		    <!-- <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
 	          		<li><a href="<?php echo base_url('admin/category/index/0');?>">News Category Manager</a></li>
                   	<li><a href="<?php echo base_url('admin/news/index/0');?>">News Manager</a></li>
                   	<li><a href="<?php echo base_url('admin/news/add/0');?>">Add new News</a></li>
 	          	</ul>
-	        </li>
+	        </li> -->
 	        
 	        <!-- <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Product <span class="caret"></span></a>
@@ -35,6 +35,15 @@
                   	<li><a href="<?php echo base_url('admin/product/add/0');?>">Add new Product</a></li>
 	          	</ul>
 	        </li> -->
+
+	        <li class="dropdown">
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Service <span class="caret"></span></a>
+	          	<ul class="dropdown-menu text-capitalize" role="menu">
+	          		<li><a href="<?php echo base_url('admin/category/index/3');?>">Service Category Manager</a></li>
+                  	<li><a href="<?php echo base_url('admin/news/index/3');?>">Service Manager</a></li>
+                  	<li><a href="<?php echo base_url('admin/news/add/3');?>">Add new Service</a></li>
+	          	</ul>
+	        </li>
 
 	        <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project <span class="caret"></span></a>
@@ -53,9 +62,6 @@
 	        <li>
 	        	<a href="<?php echo base_url();?>admin/banner">Slide Show</a>
 	        </li>
-	        <!-- <li>
-	          	<a href="<?php echo base_url();?>admin/gallery">Gallery</a>
-          	</li> -->
           	<!-- <li>
 	          	<a href="<?php echo base_url();?>admin/video">Video</a>
           	</li> -->

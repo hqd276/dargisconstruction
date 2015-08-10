@@ -101,14 +101,6 @@ tinymce.init({
 				<textarea class="form-control" id="detail" name="detail" placeholder="Detail"><?php echo $item['detail']; ?></textarea>
 			</div>
 		</div>
-		<?php if(in_array($type, array(1,2))) {?>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Information</label>
-			<div class="col-sm-10">
-				<textarea class="form-control" id="info" name="info" placeholder="Information"><?php echo $item['info']; ?></textarea>
-			</div>
-		</div>
-		<?php }?>
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Tag</label>
 			<div class="col-sm-10">
@@ -131,12 +123,6 @@ tinymce.init({
 			<label for="inputEmail3" class="col-sm-2 control-label">Home News</label>
 			<div class="col-sm-10">
 				<input type ="checkbox" name="home_news" value="1" <?php echo ($item['home_news'] == 1)?"checked":""; ?>>
-			</div>
-		</div>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Video News</label>
-			<div class="col-sm-10">
-				<input type ="checkbox" name="is_video" value="1" <?php echo ($item['is_video'] == 1)?"checked":""; ?>>
 			</div>
 		</div>
 		<div class="form-group col-sm-12">

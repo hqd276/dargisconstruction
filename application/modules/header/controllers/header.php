@@ -14,6 +14,7 @@ class Header extends MX_Controller{
 		$cat_news = array();
 		$cat_product = array();
 		$cat_project = array();
+		$cat_service = array();
 		$categories = $this->modelcategory->getCategories(array('status'=>1),null," ORDER BY `order`");
 		
 		foreach ($categories as $key => $value) {
@@ -23,11 +24,20 @@ class Header extends MX_Controller{
 				$cat_news[] = $value;
 			}else if ($value['type']==2){
 				$cat_project[] = $value;
+			}else if ($value['type']==3){
+				$cat_service[] = $value;
 			}
 		}
 		$data['cat_news'] = $cat_news;
 		$data['cat_product'] = $cat_product;
 		$data['cat_project'] = $cat_project;
+		$data['cat_service'] = $cat_service;
+
+		$list_service = $this->modelcategory->getCategories(array('status'=>1,'type'=>3),null," ORDER BY `order`");
+		foreach ($list_service as $key => $value) {
+			$list_service[$key]['items'] = $this->modelnews->getNews(array('category_id'=>$value['id']));
+		}
+		$data['list_service'] = $list_service;
 
 		$data['page'] = $page;
 
