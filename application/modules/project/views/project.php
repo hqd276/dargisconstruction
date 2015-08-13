@@ -8,7 +8,7 @@
 </style>
 
 <div class="bg-white container">
-	<h2 class="text-uppercase">Project</h2>
+	<h2 class="text-uppercase"><?php echo $category['name']?></h2>
 	<hr>
 
 	<div class="row col-md-12 wrapper-parent">

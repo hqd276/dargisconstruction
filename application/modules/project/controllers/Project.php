@@ -44,7 +44,8 @@ class Project extends MX_Controller {
 		}
 
 		$list_items = $this->modelproject->getProject($where);
- 
+
+ 		$data['category'] = $category;
  		$data['list_items'] = $list_items;
 		$this->template->build('project',$data);
 	}

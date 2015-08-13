@@ -92,7 +92,7 @@ class Project extends MX_Controller{
 		}
 		$this->load->model(array('modelcategory'));
 
-		$category = $this->modelcategory->getCategories();
+		$category = $this->modelcategory->getCategories(array("type"=>2));
 
 		$data['category_box'] = $this->category_box($category, $dataC);
 
@@ -109,7 +109,7 @@ class Project extends MX_Controller{
 		$this->load->helper(array('form')); 
 		$this->load->helper(array('util')); 
 
-		$dataC = $this->modelgallery->getImageById($id);
+		$dataC = $this->modelproject->getImageById($id);
 		
 		if ($this->input->post('submit') == "ok") {
 			$dataC['title'] = $this->input->post('title'); 
@@ -130,7 +130,7 @@ class Project extends MX_Controller{
 				}
 			}
 
-			if ($this->modelgallery->updateImage($id,$dataC)){
+			if ($this->modelproject->updateImage($id,$dataC)){
 				$data['b_Check']= true;
 				redirect(base_url('admin/project'));
 			}else{
@@ -139,7 +139,7 @@ class Project extends MX_Controller{
 		}
 		$this->load->model(array('modelcategory'));
 
-		$category = $this->modelcategory->getCategories(array("type"=>0));
+		$category = $this->modelcategory->getCategories(array("type"=>2));
 
 		$data['category_box'] = $this->category_box($category, $dataC);
 
@@ -148,7 +148,7 @@ class Project extends MX_Controller{
 	}
 
 	public function delete($id=0){
-		$this->db->delete('gallery', array('id' => $id)); 
+		$this->db->delete('project', array('id' => $id)); 
 		redirect(base_url('/admin/project'));
 	}
 

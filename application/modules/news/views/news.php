@@ -2,9 +2,7 @@
 <div class="container">
 	<h2 class="text-uppercase"><?php echo $title?></h2>
 	<hr>
-	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'service/'. $cat['slug']?>"><?php echo $cat['name']?></a>
-	<hr>
-
+	
 	<div class="col-sm-3">
 		<?php echo $template['partials']['left']; ?>
 	</div>

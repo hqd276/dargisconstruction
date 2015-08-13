@@ -108,6 +108,8 @@ class News extends MX_Controller {
 			redirect(base_url().'news');
 
 		$other_news = array();
+		$category = array();
+		
 		if($detail_news['category_id']>0){
 			$category = $this->modelcategory->getCategoryById($detail_news['category_id']);
 			if ($category)
@@ -124,6 +126,7 @@ class News extends MX_Controller {
 		// $dataR = Modules::run('right',$detail_news['type']);
 		// $this->template->set_partial('right','right',$dataR);
 
+		$data['category'] = $category;
 		$data['title'] = $detail_news['title'] ;
 		$data['other_news'] = $other_news;
 		$data['item'] = $detail_news;

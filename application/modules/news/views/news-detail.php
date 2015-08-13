@@ -1,6 +1,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/news.css">
 <div class="container bg-white">
-
+	<h2 class="text-uppercase"><?php echo $category['name']?></h2>
+	<hr>
+	
 	<div class="col-sm-3">
 		<?php echo $template['partials']['left']; ?>
 	</div>

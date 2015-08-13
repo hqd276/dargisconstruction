@@ -55,7 +55,7 @@
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<?php foreach ($banners as $key => $value){?>
-				<li data-target="#carousel-large" data-slide-to="0" class="<?php echo ($key==0)?"active":"" ?>"></li>
+				<li data-target="#carousel-large" data-slide-to="<?php echo $key?>" class="<?php echo ($key==0)?"active":"" ?>"></li>
 			   	<?php } ?>
 			</ol>
 
