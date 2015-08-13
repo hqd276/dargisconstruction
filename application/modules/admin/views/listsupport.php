@@ -5,6 +5,7 @@
 			<th>Id</th>
 			<th>Email</th>
 			<th>Phone</th>
+			<th>Content</th>
 			<th>Action</th>
 		</thead>
 		<tbody>
@@ -13,9 +14,9 @@
 				<td><?php echo $item->id?></td>
 				<td><?php echo $item->email?></td>
 				<td><?php echo $item->phone?></td>
+				<td><?php echo $item->content?></td>
 				<td>
 					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/support/delete/'.$item->id)?>')"  class="btn btn-default"> Delete </a>
-					<a href="#" class="btn btn-default"> Reply </a>
 				</td>
 			</tr>
 			

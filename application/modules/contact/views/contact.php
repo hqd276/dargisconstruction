@@ -4,7 +4,7 @@
 	<h2 class="text-uppercase"><?php echo $setting['contact']['data']->name;?></h2>
 	<hr>
 
-	<form class="form-horizontal  col-sm-8" role="form" method="post" action="<?php echo base_url();?>contact">
+	<form class="form-horizontal  col-sm-8" role="form" method="post" action="">
 		<span class="success">
 			<?php 
 			if(isset($b_Check))

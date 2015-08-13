@@ -36,7 +36,7 @@
 			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <span class="caret"></span></a>
 		          	<ul class="dropdown-menu text-capitalize" role="menu">
 		          		<?php foreach ($cat_project as $key => $value) {?>
-		          			<li><a href="<?php echo base_url('project/index/'.$value['id']);?>"><?php echo $value['name']?></a></li>
+		          			<li><a href="<?php echo base_url('project/'.$value['slug']);?>"><?php echo $value['name']?></a></li>
 		          		<?php }?>
 		          	</ul>
 			    </li>

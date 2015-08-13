@@ -15,13 +15,13 @@ class Home extends MX_Controller{
 
 		$data = array();
 
-		$this->load->model(array('admin/modelbanner','admin/modelproduct','admin/modelcategory','admin/modelgallery'));
+		$this->load->model(array('admin/modelbanner','admin/modelproduct','admin/modelcategory','admin/modelgallery','admin/modelsetting'));
 
-		$categories = $this->modelcategory->getCategories(array('status'=>1,'type'=>1));
-		foreach ($categories as $key => $value) {
-			$list_product = $this->modelproduct->getProduct(array('category_id'=>$value['id']),' LIMIT 0,4');
-			$categories[$key]['list_product'] = $list_product;
-		}
+		$about = $this->modelsetting->getSettingByKey('about');
+		$about['data'] = json_decode($about['value']);
+		$data['about'] = $about;
+
+		$categories = $this->modelcategory->getCategories(array('status'=>1,'type'=>2));
 		$data['categories'] = $categories;
 
 		$banners = $this->modelbanner->getBanner(array('position'=>0));

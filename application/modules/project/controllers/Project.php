@@ -32,4 +32,20 @@ class Project extends MX_Controller {
  		$data['list_items'] = $list_items;
 		$this->template->build('project',$data);
 	}
+	public function index_t($slug = ''){
+		$data = array();
+		$data['page'] = "project";
+
+		$where = array('status'=>1);
+
+		$category = $this->modelcategory->getCategoryBy('slug',$slug);
+		if ($category){
+			$where['category_id'] = $category['id'];
+		}
+
+		$list_items = $this->modelproject->getProject($where);
+ 
+ 		$data['list_items'] = $list_items;
+		$this->template->build('project',$data);
+	}
 }

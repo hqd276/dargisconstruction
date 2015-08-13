@@ -1,3 +1,6 @@
+body {
+	font-family: Roboto;
+}
 html,a{
 	color: #696969;
 }
@@ -9,4 +12,15 @@ a:hover {
 }
 .middle {
 	background: url('../images/bg_content.png') repeat-x #f6f6f6;
+	min-height: 450px;
+	padding-bottom: 30px;
+}
+@media (max-width: 768px ){
+	.middle {
+		min-height: 400px;
+	}
+}
+.login-form {
+	margin-top: 50px;
+	margin-bottom: 50px;
 }

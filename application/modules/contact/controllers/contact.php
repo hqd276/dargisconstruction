@@ -35,11 +35,11 @@ class Contact extends MX_Controller {
 
 		#Kiểm tra điều kiện validate 
 		if($this->form_validation->run() == TRUE){ 
-			$data['email'] = $this->input->post('email'); 
-			$data['phone'] = $this->input->post('phone'); 
-			$data['content'] = $this->input->post('content'); 
+			$dataC['email'] = $this->input->post('email'); 
+			$dataC['phone'] = $this->input->post('phone'); 
+			$dataC['content'] = $this->input->post('content'); 
 
-			if ($this->model->insertSupport($data)){
+			if ($this->model->insertSupport($dataC)){
 				$data['b_Check']= true;
 			}else{
 				$data['b_Check']= false;
