@@ -15,6 +15,8 @@ class News extends MX_Controller {
 		$this->load->model('admin/modelcategory');
 
 		$data = Modules::run('header','home');
+
+		$data['page'] = 'service';
 		$this->template->set_partial('header','header',$data);
 
 		$this->template->set_partial('footer','footer',$data);
@@ -50,6 +52,7 @@ class News extends MX_Controller {
 		if ($category){
 			$data['cat'] = $category;
 			$data['title'] = $category['name'];
+			$data['slug'] = $category['slug'];
 			$data['description'] = $category['description'];
 			$list_news = $this->modelnews->getNews(array('category_id'=>$category['id']),' LIMIT 0,5');
 			if($list_news){

@@ -33,6 +33,8 @@ class Home extends MX_Controller{
 
 		$data['show_slide'] = true;
 
+		$data['page'] = 'home';
+
 		$this->template->build('home',$data);
 	}
 }

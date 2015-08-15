@@ -1,16 +1,31 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/gallery.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/ekko-lightbox/ekko-lightbox.css">
-
 <style type="text/css">
     .ekko-lightbox .modal-dialog {
-    	width: 70% !important;
+        width: 70% !important;
     }
 </style>
 
-<div class="bg-white container">
-	<h2 class="text-uppercase"><?php echo $category['name']?></h2>
-	<hr>
+<div class="container-fluid cover">
+    <div class="container-fluid dim">
+      <div class="container">
+        <div class="caption">
+          <h1><?php echo $category['name']?></h1>
+        </div>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="<?php echo base_url();?>" target="">Home</a></li>
+            <li><a> <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#" target="">Projects</a></li>
+            <li><a> <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="<?php echo base_url('project/'.$category['slug']);?>" target=""> <b><?php echo $category['name']?></b></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
 
+<div class="bg-white container" style="margin-top:20px;">
 	<div class="row col-md-12 wrapper-parent">
         <?php foreach ($list_items as $key => $value) {?>
             <div class="col-xs-6 col-md-3">

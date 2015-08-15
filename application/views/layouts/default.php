@@ -18,13 +18,14 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/style.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/header.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/footer.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/normalize.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <script src="<?php echo base_url();?>assets/js/lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/lightbox.css">
+
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/services.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/app.css">
 
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700,900,300' rel='stylesheet' type='text/css'>
 
@@ -35,9 +36,9 @@
 <div class="">
   <?php echo $template['partials']['header']; ?>
 
-  <div class="middle" >
+  <main>
     <?php echo $template['body']; ?>
-  </div>
+  </main>
 
   <?php echo $template['partials']['footer']; ?>
 </div>

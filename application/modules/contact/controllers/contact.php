@@ -12,6 +12,8 @@ class Contact extends MX_Controller {
 		$this->load->model(array('model'));
 
 		$data = Modules::run('header','home');
+		$data['page'] = 'contact';
+
 		$this->template->set_partial('header','header',$data );
 		$this->template->set_partial('footer','footer',$data);
 	}

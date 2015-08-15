@@ -1,8 +1,23 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact.css">
 
-<div class="container contact-form bg-white">
-	<h2 class="text-uppercase"><?php echo $setting['contact']['data']->name;?></h2>
-	<hr>
+<div class="container-fluid cover">
+    <div class="container-fluid dim">
+      <div class="container">
+        <div class="caption">
+          <h1><?php echo $setting['contact']['data']->name;?></h1>
+        </div>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="<?php echo base_url();?>" target="">Home</a></li>
+            <li><a> <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="<?php echo base_url('contact');?>" target=""><b>Contact</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container contact-form bg-white" style="margin-top:20px;">
 
 	<form class="form-horizontal  col-sm-8" role="form" method="post" action="">
 		<span class="success">

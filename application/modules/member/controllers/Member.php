@@ -26,6 +26,8 @@ class Member extends MX_Controller {
  		$list_items = $this->modelmember->getMembers(array('status'=>1));
  
  		$data['list_items'] = $list_items;
+
+ 		$data['page'] = 'team';
 		$this->template->build('member',$data);
 	}
 }

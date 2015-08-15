@@ -15,6 +15,7 @@ class Project extends MX_Controller {
 		$this->load->model('admin/modelproject');
 
 		$data = Modules::run('header','home');
+		$data['page'] = 'project';
 		$this->template->set_partial('header','header',$data);
 
 		$this->template->set_partial('footer','footer',$data);
