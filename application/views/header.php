@@ -4,7 +4,10 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target="#navbar-tp" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="<?php echo base_url();?>" class="navbar-brand"><img src="<?php echo base_url();?>assets/images/logo.png" alt=""></a>
+          <button type="button" data-toggle="collapse" data-target="#navbar-tp" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="<?php echo base_url();?>" class="navbar-brand">
+          <div><img src="<?php echo base_url();?>assets/images/logo.png" alt=""></div>
+          <div><i class="fa fa-phone"></i>1289 237 7377</div>
+          </a>
         </div>
         <div id="navbar-tp" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

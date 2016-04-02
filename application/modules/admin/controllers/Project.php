@@ -42,8 +42,9 @@ class Project extends MX_Controller{
 		if (count($project)>$item_per_page){
 			$data['next'] = $page + 1;
 			array_pop($project);
-		}else 
+		}else{
 			$data['next'] = 0;
+		}
 		
 		$data['prev'] = $page - 1;
 
